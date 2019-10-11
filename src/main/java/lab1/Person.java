@@ -10,4 +10,11 @@ public class Person {
         this.email = email;
         this.phone = phone;
     }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone=" + phone;
+    }
 }

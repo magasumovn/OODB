@@ -9,8 +9,18 @@ public class Shop {
     private int phone;
     private String email;
     private List<Worker> workers = new ArrayList<>(); // список сотрудников
+
     private List<Customer> customers = new ArrayList<>(); // список заказчиков
-    public static List<Product> products = new ArrayList<>(); // каталог товаров
+
+    private static List<Product> products = new ArrayList<>(); // каталог товаров
+
+    public static List<Product> getProducts() {
+        return products;
+    }
+
+    public static void setProducts(List<Product> products) {
+        Shop.products = products;
+    }
 
     public String getName() {
         return name;
@@ -68,5 +78,24 @@ public class Shop {
         if (!products.contains(product)) {
             products.add(product);
         }
+    }
+
+    @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            sb.append("Shop { name = '" + name + "', address = '" + address + ", phone = " + phone + ", email = " + email + "\nworkers: [\n");
+            for (Worker worker : workers) {
+                sb.append(worker.toString() + "\n");
+            }
+            sb.append("]\ncustomers: [\n");
+            for (Customer customer : customers) {
+                sb.append(customer.toString() + "\n");
+            }
+            sb.append("]\nproducts: [\n");
+            for (Product product : products) {
+                sb.append(product.toString() + "\n");
+            }
+            sb.append("]\n}");
+            return sb.toString();
     }
 }

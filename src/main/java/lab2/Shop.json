@@ -1,0 +1,18 @@
+[{
+	"name": "Магазин",
+	"address": "Баумана",
+	"phone": 432750,
+	"email": "mne2207@yandex.ru",
+	"workers": [{
+			"name": "Никита",
+			"email": "mne2207@gmail.com",
+			"phone": 654321,
+			"position": "manager"
+		   }],
+	"customers": [{
+			"name": "Арсений",
+			"email": "mne2207@mail.ru",
+			"phone": 123456
+		   }]
+}]
+	

@@ -8,7 +8,7 @@ public class Worker extends Person {
     }
 
     public static Order confirmOrder(Order order) {
-        for (Product product : Shop.products) {
+        for (Product product : Shop.getProducts()) {
             if (product.getProductName().equals(order.getProduct().getProductName())) {
                 order.setID(product.getID());
                 order.setCost(product.getCost());
@@ -20,5 +20,13 @@ public class Worker extends Person {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "position='" + position + ", " +
+                super.toString() +
+                '}';
     }
 }

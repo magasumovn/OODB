@@ -20,4 +20,13 @@ public class Customer extends Person {
     public List<Order> getOrders() {
         return orders;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone=" + phone +
+                '}';
+    }
 }

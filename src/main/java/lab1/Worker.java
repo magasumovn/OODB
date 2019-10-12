@@ -3,8 +3,10 @@ package lab1;
 public class Worker extends Person {
     String position;
 
-    public Worker(String name, String passport, int phone) {
-        super(name, passport, phone);
+    public Worker(String name, String email, int phone, String position) {
+        super(name, email, phone);
+        this.position = position;
+
     }
 
     public static Order confirmOrder(Order order) {
@@ -16,10 +18,6 @@ public class Worker extends Person {
             }
         }
         return null;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
     }
 
     @Override

@@ -4,14 +4,13 @@ import com.google.gson.Gson;
 import lab1.Product;
 import lab1.Shop;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class LoadDB {
+public class DataBase {
 
     public static List<Shop> load() {
 
@@ -35,5 +34,25 @@ public class LoadDB {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void saveShop(List<Shop> shops) {
+        String shopAsJason = new Gson().toJson(shops);
+
+        try (OutputStream output = new FileOutputStream("src/main/java/lab2/Shop.json")) {
+            output.write(shopAsJason.getBytes(StandardCharsets.UTF_8));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveProduct(List<Product> products) {
+        String shopAsJason = new Gson().toJson(products);
+
+        try (OutputStream output = new FileOutputStream("src/main/java/lab2/Product.json")) {
+            output.write(shopAsJason.getBytes(StandardCharsets.UTF_8));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

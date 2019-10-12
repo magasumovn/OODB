@@ -11,6 +11,18 @@ public class Product {
         this.cost = cost;
     }
 
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
     public int getID() {
         return ID;
     }

@@ -1,18 +1,1 @@
-[{
-	"name": "Магазин",
-	"address": "Баумана",
-	"phone": 432750,
-	"email": "mne2207@yandex.ru",
-	"workers": [{
-			"name": "Никита",
-			"email": "mne2207@gmail.com",
-			"phone": 654321,
-			"position": "manager"
-		   }],
-	"customers": [{
-			"name": "Арсений",
-			"email": "mne2207@mail.ru",
-			"phone": 123456
-		   }]
-}]
-	
+[{"name":"Магнит1","address":"Баумана","phone":469218,"email":"aaa@yandex.ru","workers":[{"position":"manager","name":"Артур","email":"bbb@gmail.com","phone":111111},{"position":"Консультант","name":"Александр","email":"gggg@inbox.ru","phone":222555}],"customers":[{"name":"Андрей","email":"qqqq@rambler.ru","phone":123456}]},{"name":"Магнит2","address":"Пушкина","phone":672751,"email":"2265@yandex.ru","workers":[{"position":"manager","name":"Петр","email":"mmm@gmail.com","phone":659822}],"customers":[{"name":"Анатолий","email":"mtyu@mail.ru","phone":128569}]}]

@@ -1,5 +1,7 @@
 package lab1;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +12,9 @@ public class Customer extends Person {
         super(name, email, phone);
     }
 
+    public Customer() {
+    }
+
     public void createOrder(Product product, int quantity) {
         Order order = new Order(this, product, quantity);
         if (Worker.confirmOrder(order) != null) {
@@ -17,6 +22,8 @@ public class Customer extends Person {
         }
     }
 
+    @XmlElementWrapper(name = "orders")
+    @XmlElement(name = "order")
     public List<Order> getOrders() {
         return orders;
     }

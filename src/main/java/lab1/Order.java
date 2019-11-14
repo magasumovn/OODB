@@ -1,5 +1,6 @@
 package lab1;
 
+import javax.xml.bind.annotation.XmlElement;
 import java.time.LocalDateTime;
 
 public class Order {
@@ -41,26 +42,32 @@ public class Order {
         this.date = date;
     }
 
+    @XmlElement(name = "id")
     public int getID() {
         return ID;
     }
 
+    @XmlElement(name = "customer")
     public Customer getCustomer() {
         return customer;
     }
 
+    @XmlElement(name = "product")
     public Product getProduct() {
         return product;
     }
 
+    @XmlElement(name = "quantity")
     public int getQuantity() {
         return quantity;
     }
 
+    @XmlElement(name = "cost")
     public double getCost() {
         return cost;
     }
 
+    @XmlElement(name = "date")
     public LocalDateTime getDate() {
         return date;
     }

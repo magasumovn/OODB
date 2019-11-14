@@ -11,6 +11,9 @@ public class Person {
         this.phone = phone;
     }
 
+    public Person() {
+    }
+
     @Override
     public String toString() {
         return "name='" + name + '\'' +

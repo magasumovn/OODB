@@ -23,14 +23,17 @@ public class Product {
         this.cost = cost;
     }
 
+    //@XmlElement(name = "id")
     public int getID() {
         return ID;
     }
 
+    //@XmlElement(name = "name")
     public String getProductName() {
         return productName;
     }
 
+    //@XmlElement(name = "cost")
     public double getCost() {
         return cost;
     }

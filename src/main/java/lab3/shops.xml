@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shops>
+    <shop>
+        <address>баумана</address>
+        <customers>
+            <customer>
+                <orders/>
+            </customer>
+        </customers>
+        <name>магнит</name>
+        <phone>7960</phone>
+        <workers>
+            <worker/>
+            <worker/>
+        </workers>
+    </shop>
+</shops>

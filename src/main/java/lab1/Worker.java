@@ -3,6 +3,10 @@ package lab1;
 public class Worker extends Person {
     String position;
 
+    public Worker() {
+
+    }
+
     public Worker(String name, String email, int phone, String position) {
         super(name, email, phone);
         this.position = position;

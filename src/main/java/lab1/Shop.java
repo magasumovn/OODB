@@ -1,5 +1,7 @@
 package lab1;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +11,7 @@ public class Shop {
     private int phone;
     private String email;
     private List<Worker> workers = new ArrayList<>(); // список сотрудников
-
     private List<Customer> customers = new ArrayList<>(); // список заказчиков
-
     private static List<Product> products = new ArrayList<>(); // каталог товаров
 
     public static List<Product> getProducts() {
@@ -22,18 +22,22 @@ public class Shop {
         Shop.products = products;
     }
 
+    @XmlElement(name = "name")
     public String getName() {
         return name;
     }
 
+    @XmlElement(name = "address")
     public String getAddress() {
         return address;
     }
 
+    @XmlElement(name = "phone")
     public int getPhone() {
         return phone;
     }
 
+    @XmlElement(name = "email")
     public String getEmail() {
         return email;
     }
@@ -54,10 +58,14 @@ public class Shop {
         this.email = email;
     }
 
+    @XmlElementWrapper(name = "workers")
+    @XmlElement(name = "worker")
     public List<Worker> getWorkers() {
         return workers;
     }
 
+    @XmlElementWrapper(name = "customers")
+    @XmlElement(name = "customer")
     public List<Customer> getCustomers() {
         return customers;
     }
@@ -91,10 +99,10 @@ public class Shop {
             for (Customer customer : customers) {
                 sb.append(customer.toString() + "\n");
             }
-            sb.append("]\nproducts: [\n");
+            /*sb.append("]\nproducts: [\n");
             for (Product product : products) {
                 sb.append(product.toString() + "\n");
-            }
+            }*/
             sb.append("]\n}");
             return sb.toString();
     }

@@ -12,6 +12,7 @@
         <workers>
             <worker/>
             <worker/>
+            <worker/>
         </workers>
     </shop>
 </shops>

@@ -11,6 +11,9 @@ public class Product {
         this.cost = cost;
     }
 
+    public Product() {
+    }
+
     public void setID(int ID) {
         this.ID = ID;
     }

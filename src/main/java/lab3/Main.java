@@ -19,7 +19,7 @@ public class Main {
         }
 
         if (collection != null) {
-            Shop shop = ShopUtils.findShopByName(collection.getShops(), "магнит");
+            Shop shop = ShopUtils.findShopByName(collection.getShops(), "Магнит1");
             Worker worker = new Worker("Worker", "2", 85353, "Boss");
             shop.addWorker(worker);
 

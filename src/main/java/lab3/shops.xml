@@ -1,18 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <shops>
     <shop>
-        <address>баумана</address>
+        <address>Баумана</address>
         <customers>
             <customer>
+                <email>qqqq@rambler.ru</email>
+                <name>Андрей</name>
+                <phone>123456</phone>
                 <orders/>
             </customer>
         </customers>
-        <name>магнит</name>
-        <phone>7960</phone>
+        <email>aaa@yandex.ru</email>
+        <name>Магнит1</name>
+        <phone>469218</phone>
         <workers>
-            <worker/>
-            <worker/>
-            <worker/>
+            <worker>
+                <email>bbb@gmail.com</email>
+                <name>Артур</name>
+                <phone>111111</phone>
+                <position>manager</position>
+            </worker>
+            <worker>
+                <email>gggg@inbox.ru</email>
+                <name>Александр</name>
+                <phone>222555</phone>
+                <position>Консультант</position>
+            </worker>
+            <worker>
+                <email>vpupkin777@inbox.ru</email>
+                <name>Арсений</name>
+                <phone>200047</phone>
+                <position>Консультант</position>
+            </worker>
+            <worker>
+                <email>2</email>
+                <name>Worker</name>
+                <phone>85353</phone>
+                <position>Boss</position>
+            </worker>
+        </workers>
+    </shop>
+    <shop>
+        <address>Пушкина</address>
+        <customers>
+            <customer>
+                <email>mtyu@mail.ru</email>
+                <name>Анатолий</name>
+                <phone>128569</phone>
+                <orders/>
+            </customer>
+        </customers>
+        <email>2265@yandex.ru</email>
+        <name>Магнит2</name>
+        <phone>672751</phone>
+        <workers>
+            <worker>
+                <email>mmm@gmail.com</email>
+                <name>Петр</name>
+                <phone>659822</phone>
+                <position>manager</position>
+            </worker>
         </workers>
     </shop>
 </shops>

@@ -8,6 +8,10 @@ import java.util.List;
 public class Customer extends Person {
     private List<Order> orders = new ArrayList<>();
 
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
     public Customer(String name, String email, int phone) {
         super(name, email, phone);
     }
@@ -21,6 +25,7 @@ public class Customer extends Person {
             orders.add(order);
         }
     }
+
 
     @XmlElementWrapper(name = "orders")
     @XmlElement(name = "order")

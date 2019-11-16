@@ -1,7 +1,6 @@
 package lab1;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.time.LocalDateTime;
 
 public class Order {
     private int ID; // номер заказа
@@ -9,13 +8,16 @@ public class Order {
     private Product product; // название товара
     private int quantity; // количество товара
     private double cost;
-    private LocalDateTime date;
+   // private LocalDateTime date;
 
     public Order(Customer customer, Product product, int quantity) {
         this.customer = customer;
         this.product = product;
         this.quantity = quantity;
-        this.date = LocalDateTime.now();
+        //this.date = LocalDateTime.now();
+    }
+
+    public Order() {
     }
 
     public void setID(int ID) {
@@ -38,9 +40,9 @@ public class Order {
         this.cost = cost;
     }
 
-    public void setDate(LocalDateTime date) {
+   /* public void setDate(LocalDateTime date) {
         this.date = date;
-    }
+    }*/
 
     @XmlElement(name = "id")
     public int getID() {
@@ -67,10 +69,10 @@ public class Order {
         return cost;
     }
 
-    @XmlElement(name = "date")
+    /*@XmlElement(name = "date")
     public LocalDateTime getDate() {
         return date;
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -80,7 +82,7 @@ public class Order {
                 ", productName='" + product + '\'' +
                 ", quantity=" + quantity +
                 ", cost=" + cost +
-                ", date=" + date +
+                /*", date=" + date +*/
                 '}';
     }
 }

@@ -37,6 +37,14 @@ public class Shop {
         return phone;
     }
 
+    public void setWorkers(List<Worker> workers) {
+        this.workers = workers;
+    }
+
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
+    }
+
     @XmlElement(name = "email")
     public String getEmail() {
         return email;

@@ -1,5 +1,7 @@
 package lab1;
 
+import javax.xml.bind.annotation.XmlElement;
+
 public class Worker extends Person {
     String position;
 
@@ -11,6 +13,15 @@ public class Worker extends Person {
         super(name, email, phone);
         this.position = position;
 
+    }
+
+    @XmlElement(name = "position")
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     public static Order confirmOrder(Order order) {

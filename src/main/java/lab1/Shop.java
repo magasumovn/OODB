@@ -107,10 +107,6 @@ public class Shop {
             for (Customer customer : customers) {
                 sb.append(customer.toString() + "\n");
             }
-            /*sb.append("]\nproducts: [\n");
-            for (Product product : products) {
-                sb.append(product.toString() + "\n");
-            }*/
             sb.append("]\n}");
             return sb.toString();
     }

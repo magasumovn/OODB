@@ -8,13 +8,11 @@ public class Order {
     private Product product; // название товара
     private int quantity; // количество товара
     private double cost;
-   // private LocalDateTime date;
 
     public Order(Customer customer, Product product, int quantity) {
         this.customer = customer;
         this.product = product;
         this.quantity = quantity;
-        //this.date = LocalDateTime.now();
     }
 
     public Order() {
@@ -39,10 +37,6 @@ public class Order {
     public void setCost(double cost) {
         this.cost = cost;
     }
-
-   /* public void setDate(LocalDateTime date) {
-        this.date = date;
-    }*/
 
     @XmlElement(name = "id")
     public int getID() {
@@ -69,11 +63,6 @@ public class Order {
         return cost;
     }
 
-    /*@XmlElement(name = "date")
-    public LocalDateTime getDate() {
-        return date;
-    }*/
-
     @Override
     public String toString() {
         return "lab1.Order{" +
@@ -82,7 +71,6 @@ public class Order {
                 ", productName='" + product + '\'' +
                 ", quantity=" + quantity +
                 ", cost=" + cost +
-                /*", date=" + date +*/
                 '}';
     }
 }

@@ -5,10 +5,9 @@ public class Customer extends Person {
     private String payment;
     private Order order;
 
-    public Customer(String name, String email, int phone, String payment, Order order) {
+    public Customer(String name, String email, int phone, String payment) {
         super(name, email, phone);
         this.payment = payment;
-        this.order = order;
     }
 
     public String getPayment() {

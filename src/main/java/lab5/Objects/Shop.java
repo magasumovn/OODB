@@ -1,6 +1,7 @@
 package lab5.Objects;
 
 public class Shop {
+    private int id;
     private String shopName;
     private String address;
     private int phone;
@@ -8,13 +9,27 @@ public class Shop {
     private Worker worker;
     private Customer customer;
 
-    public Shop(String shopName, String address, int phone, String email, Worker worker, Customer customer) {
+    public Shop(int id, String shopName, String address, int phone, String email) {
+        this.id = id;
         this.shopName = shopName;
         this.address = address;
         this.phone = phone;
         this.email = email;
-        this.worker = worker;
-        this.customer = customer;
+    }
+
+    public Shop(String shopName, String address, int phone, String email) {
+        this.shopName = shopName;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getShopName() {
@@ -68,7 +83,8 @@ public class Shop {
     @Override
     public String toString() {
         return "Shop{" +
-                "shopName='" + shopName + '\'' +
+                "id=" + id +
+                ", shopName='" + shopName + '\'' +
                 ", address='" + address + '\'' +
                 ", phone=" + phone +
                 ", email='" + email + '\'' +

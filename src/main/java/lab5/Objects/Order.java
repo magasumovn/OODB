@@ -1,24 +1,24 @@
 package lab5.Objects;
 
 public class Order {
-    private int ID;
+    private int orderId;
     private String product;
     private int quantity;
-    private double cost;
+    private int cost;
 
-    public Order(int ID, String product, int quantity, double cost) {
-        this.ID = ID;
+    public Order(int orderId, String product, int quantity, int cost) {
+        this.orderId = orderId;
         this.product = product;
         this.quantity = quantity;
         this.cost = cost;
     }
 
-    public int getID() {
-        return ID;
+    public int getorderId() {
+        return orderId;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setorderId(int orderId) {
+        this.orderId = orderId;
     }
 
     public String getProduct() {
@@ -37,18 +37,18 @@ public class Order {
         this.quantity = quantity;
     }
 
-    public double getCost() {
+    public int getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(int cost) {
         this.cost = cost;
     }
 
     @Override
     public String toString() {
         return "Order{" +
-                "ID=" + ID +
+                "ID=" + orderId +
                 ", product='" + product + '\'' +
                 ", quantity=" + quantity +
                 ", cost=" + cost +

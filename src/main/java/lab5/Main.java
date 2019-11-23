@@ -14,16 +14,14 @@ public class Main {
 
         for (Shop shop : shops) {
             System.out.println(shop);
-            System.out.println("----------------------------------------------------");
         }
         System.out.println("___________________________________________________________");
 
-        repo.deleteShopByName("Пятурочка");
+        repo.deleteShopByName("Пятерочка");
 
         shops = repo.findAll();
         for (Shop shop : shops) {
             System.out.println(shop);
-            System.out.println("----------------------------------------------------");
         }
         System.out.println("___________________________________________________________");
 
@@ -70,7 +68,6 @@ public class Main {
         shops = repo.findAll();
         for (Shop shop : shops) {
             System.out.println(shop);
-            System.out.println("----------------------------------------------------");
         }
         System.out.println("___________________________________________________________");
     }

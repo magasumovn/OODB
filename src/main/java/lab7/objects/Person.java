@@ -1,9 +1,7 @@
 package lab7.objects;
 
 import lab7.annotations.Column;
-import lab7.annotations.Entity;
 
-@Entity
 public class Person {
     @Column
     private String personName;

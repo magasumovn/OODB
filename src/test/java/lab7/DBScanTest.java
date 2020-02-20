@@ -50,7 +50,11 @@ public class DBScanTest {
                         if (field.getAnnotation(ManyToOne.class) != null || field.getAnnotation(OneToOne.class) != null) {
                             fieldNames.add(field.getName().toLowerCase().concat("_id"));
                         } else if (field.getAnnotation(OneToMany.class) != null || field.getAnnotation(ManyToMany.class) != null) {
-                            String interTableName = c.getSimpleName().toLowerCase() + "_" + field.getName().toLowerCase();
+                            String relationTypeName = field.getGenericType().getTypeName();
+                            String relationClassName = relationTypeName.substring(relationTypeName.indexOf("<") + 1, relationTypeName.indexOf(">"));
+                            String className = relationClassName.substring(relationClassName.lastIndexOf('.') + 1);
+
+                            String interTableName = c.getSimpleName().toLowerCase() + "_" + className.toLowerCase();
                             HashSet<String> interFields = new HashSet<>();
                             interFields.add(c.getSimpleName().toLowerCase() + "_id");
                             interFields.add(field.getName().toLowerCase() + "_id");

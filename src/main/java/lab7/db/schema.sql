@@ -8,15 +8,6 @@ create table shop
     primary key (id)
 );
 
-create table customersorder
-(
-    id       serial      not null,
-    product  varchar(50) not null,
-    quantity bigint      not null,
-    cost     bigint      not null,
-    primary key (id)
-);
-
 create table customer
 (
     id                    serial      not null,
@@ -24,9 +15,18 @@ create table customer
     phone                 varchar(20),
     email                 varchar(20),
     payment               varchar(50) not null,
-    customersorder_id     bigint      not null,
+    primary key (id)
+);
+
+create table customersorder
+(
+    id          serial      not null,
+    product     varchar(50) not null,
+    quantity    bigint      not null,
+    cost        bigint      not null,
+    customer_id bigint      not null,
     primary key (id),
-    foreign key (customersorder_id) references customersorder (id) on delete cascade
+    foreign key (customer_id) references customer (id) on delete cascade
 );
 
 create table worker

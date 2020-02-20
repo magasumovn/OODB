@@ -3,6 +3,7 @@ package lab7.objects;
 import lab7.annotations.Column;
 import lab7.annotations.Entity;
 import lab7.annotations.Id;
+import lab7.annotations.ManyToOne;
 
 @Entity
 public class CustomersOrder {
@@ -14,12 +15,15 @@ public class CustomersOrder {
     private Long quantity;
     @Column
     private Long cost;
+    @Column
+    @ManyToOne
+    private Customer customer;
 
-    public Long getid() {
+    public Long getId() {
         return id;
     }
 
-    public void setid(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,5 +49,13 @@ public class CustomersOrder {
 
     public void setCost(Long cost) {
         this.cost = cost;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

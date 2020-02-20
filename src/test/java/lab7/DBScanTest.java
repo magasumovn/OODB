@@ -2,7 +2,6 @@ package lab7;
 
 import lab7.annotations.Entity;
 import lab7.annotations.ManyToOne;
-import lab7.annotations.OneToMany;
 import lab7.annotations.OneToOne;
 import org.junit.Test;
 
@@ -32,7 +31,7 @@ public class DBScanTest {
             if (c.getAnnotation(Entity.class) != null) {
                 HashSet<String> fieldNames = new HashSet<>();
                 for (Field field : c.getDeclaredFields()) {
-                    if (field.getAnnotation(ManyToOne.class) != null || field.getAnnotation(OneToOne.class) != null || field.getAnnotation(OneToMany.class) != null) {
+                    if (field.getAnnotation(ManyToOne.class) != null || field.getAnnotation(OneToOne.class) != null) {
                         fieldNames.add(field.getName().toLowerCase().concat("_id"));
                     } else {
                         fieldNames.add(field.getName().toLowerCase());

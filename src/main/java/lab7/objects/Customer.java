@@ -19,7 +19,7 @@ public class Customer extends Person {
 
     @Column
     @OneToMany
-    private List<CustomersOrder> customersOrders;
+    private List<CustomersOrder> customersOrder;
 
     public Long getId() {
         return id;
@@ -37,11 +37,11 @@ public class Customer extends Person {
         this.payment = payment;
     }
 
-    public List<CustomersOrder> getCustomersOrders() {
-        return customersOrders;
+    public List<CustomersOrder> getCustomersOrder() {
+        return customersOrder;
     }
 
-    public void setCustomersOrders(List<CustomersOrder> customersOrders) {
-        this.customersOrders = customersOrders;
+    public void setCustomersOrder(List<CustomersOrder> customersOrder) {
+        this.customersOrder = customersOrder;
     }
 }

@@ -39,7 +39,7 @@ create table worker
     foreign key (shop_id) references shop (id) on delete cascade
 );
 
-create table customer_customersorders
+create table customer_customersorder
 (
     customer_id      bigint not null,
     customersorder_id bigint not null,

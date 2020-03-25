@@ -1,20 +1,16 @@
+package lab9.objects;
 
-package lab7.objects;
-
-import lab7.annotations.Column;
-import lab7.annotations.Entity;
-import lab7.annotations.Id;
-import lab7.annotations.ManyToOne;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Worker extends Person {
     @Id
     private Long id;
-
-    @Column
+    @Column(length = 25)
     private String position;
-
-    @Column
     @ManyToOne
     private Shop shop;
 

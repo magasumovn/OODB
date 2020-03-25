@@ -1,4 +1,4 @@
-package lab7;
+package lab7.init;
 
 import lab7.annotations.*;
 import org.junit.Test;
@@ -80,5 +80,4 @@ public class DBScanTest {
             }
         }
     }
-
 }

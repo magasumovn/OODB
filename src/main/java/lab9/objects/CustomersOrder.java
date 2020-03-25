@@ -1,18 +1,14 @@
-package lab7.objects;
+package lab9.objects;
 
-import lab7.annotations.Column;
-import lab7.annotations.Entity;
-import lab7.annotations.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class CustomersOrder {
     @Id
     private Long id;
-    @Column
     private String product;
-    @Column
     private Long quantity;
-    @Column
     private Long cost;
 
     public Long getId() {
